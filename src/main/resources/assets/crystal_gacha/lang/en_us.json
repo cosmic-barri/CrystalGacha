@@ -1,0 +1,14 @@
+{
+  "item_group.crystal_gacha.crystal_gacha_tab": "Crystal Gacha",
+
+  "advancements.spyglass_at_gacha.title": "Is It a Rock?",
+  "advancements.spyglass_at_gacha.description":  "Look at a Gacha through a Spyglass",
+
+  "entity.crystal_gacha.crystal_gacha": "Crystal Gacha",
+  "item.crystal_gacha.crystal_gacha_spawn_egg": "Crystal Gacha Spawn Egg",
+
+  "item.crystal_gacha.common_crystal": "Common Crystal",
+  "item.crystal_gacha.uncommon_crystal": "Uncommon Crystal",
+  "item.crystal_gacha.rare_crystal": "Rare Crystal",
+  "item.crystal_gacha.epic_crystal": "Epic Crystal"
+}

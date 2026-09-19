@@ -1,0 +1,50 @@
+{
+  "parent": "minecraft:adventure/spyglass_at_dragon",
+  "criteria": {
+    "spyglass_at_gacha": {
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:spyglass"
+          ]
+        },
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "looking_at": {
+                  "type": "crystal_gacha:crystal_gacha"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:using_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancements.spyglass_at_gacha.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:spyglass"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.spyglass_at_gacha.title"
+    }
+  },
+  "requirements": [
+    [
+      "spyglass_at_gacha"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
