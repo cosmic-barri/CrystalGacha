@@ -1,2 +1,2 @@
 # CrystalGacha
-Github repository for Crystal Gacha Minecraft mod
+Github repository for Crystal Gacha Minecraft mod.
