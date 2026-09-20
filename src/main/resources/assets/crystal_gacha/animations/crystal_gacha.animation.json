@@ -529,24 +529,6 @@
 						}
 					}
 				},
-				"BackCrystals": {
-					"rotation": {
-						"0.0": {
-							"vector": [0, 0, 0]
-						},
-						"1.0": {
-							"vector": [-25, 0, 0]
-						}
-					},
-					"position": {
-						"0.0": {
-							"vector": [0, 0, 0]
-						},
-						"1.0": {
-							"vector": [0, 4, 2]
-						}
-					}
-				},
 				"BackLeftLeg": {
 					"position": {
 						"0.0": {
@@ -670,19 +652,6 @@
 					}
 				},
 				"Tail": {
-					"position": {
-						"0.0": {
-							"vector": [0, -2, 0]
-						},
-						"1.0": {
-							"vector": [0, -2, 0]
-						},
-						"2.0": {
-							"vector": [0, -2, 0]
-						}
-					}
-				},
-				"BackCrystals": {
 					"position": {
 						"0.0": {
 							"vector": [0, -2, 0]

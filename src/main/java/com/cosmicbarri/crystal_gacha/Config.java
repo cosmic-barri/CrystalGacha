@@ -17,7 +17,7 @@ public class Config {
         ;
         MOD_BLACKLIST = BUILDER.comment("Below is all blacklisted mods. For example if you put here \"irons_spellbooks\" all the Iron's Spells 'n Spellbooks items will be blacklisted. You can do that with any mod.").defineList("mod_blacklist", List.of(), entry -> true)
         ;
-        SPAWNERS = BUILDER.comment("True or false if you want spawn eggs to be dropped (true if you want, false if you don't).").define("spawners", true);
+        SPAWNERS = BUILDER.comment("True or false if you want spawn eggs to be dropped (true if you want, false if you don't).").define("spawners", false);
         BUILDER.pop();
         SPEC = BUILDER.build();
     }

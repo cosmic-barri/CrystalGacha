@@ -217,36 +217,43 @@ public class GachaEntity extends PathfinderMob implements GeoEntity, Saddleable 
             this.charge = this.charge + 1;
             this.purity = this.purity - 3;
         } else if (stack.getRarity() == Rarity.UNCOMMON) {
-            this.charge = this.charge + 3;
+            this.charge = this.charge + 4;
             this.purity = this.purity - 2;
         } else if (stack.getRarity() == Rarity.RARE) {
-            this.charge = this.charge + 5;
+            this.charge = this.charge + 7;
             this.purity = this.purity - 1;
-        } else this.charge = this.charge + 7;
+        } else this.charge = this.charge + 13;
 
         stack.shrink(1);
 
         this.playSound(SoundEvents.STRIDER_EAT);
 
-        if (this.charge >= 50) {
+        if (this.charge > 63) {
             this.shakeTimer = this.random.nextInt(100, 400);
             this.setShaking(true);
         }
     }
 
     private Item checkPurity() {
-        if (this.purity >= 91 || this.random.nextInt(1, 100) >= 98) {
-            return ItemRegistry.EPIC_CRYSTAL.get();
-        } else if (this.purity >= 67 || this.random.nextInt(1, 100) >= 88) {
-            return ItemRegistry.RARE_CRYSTAL.get();
-        } else if (this.purity >= 30 || this.random.nextInt(1, 100) >= 78) {
-            return ItemRegistry.UNCOMMON_CRYSTAL.get();
-        } else return ItemRegistry.COMMON_CRYSTAL.get();
+        int randomChance = this.random.nextInt(1, 100);
+        if (this.purity < 30) {
+            if (randomChance < 26) {
+                return ItemRegistry.UNCOMMON_CRYSTAL.get();
+            } else return ItemRegistry.COMMON_CRYSTAL.get();
+        } else if (this.purity < 69) {
+            if (randomChance < 26) {
+                return ItemRegistry.RARE_CRYSTAL.get();
+            } else return ItemRegistry.UNCOMMON_CRYSTAL.get();
+        } else if (this.purity < 91) {
+            if (randomChance < 26) {
+                return ItemRegistry.EPIC_CRYSTAL.get();
+            } else return ItemRegistry.RARE_CRYSTAL.get();
+        } else return ItemRegistry.EPIC_CRYSTAL.get();
     }
 
     private void dropCrystal() {
         if (this.level().isClientSide || !this.isAlive()) return;
-        if (!this.isTamed() && this.purity > 70) this.setTamed(true);
+        if (!this.isTamed() && this.purity > 67) this.setTamed(true);
         ItemEntity crystal = new ItemEntity(this.level(), this.getX(), this.getY(), this.getZ(), new ItemStack(checkPurity()));
         this.level().addFreshEntity(crystal);
         this.setShaking(false);
@@ -269,7 +276,7 @@ public class GachaEntity extends PathfinderMob implements GeoEntity, Saddleable 
 
     @Override
     public @NotNull InteractionResult mobInteract(@NotNull Player player, @NotNull InteractionHand hand) {
-        if (this.isShaking() || hand != InteractionHand.MAIN_HAND) return InteractionResult.PASS;
+        if (this.getRider() != null || this.isShaking() || hand != InteractionHand.MAIN_HAND) return InteractionResult.PASS;
         if (this.canRide(player)) {
             if (!this.level().isClientSide) {
                 this.setSitting(false);
@@ -281,6 +288,7 @@ public class GachaEntity extends PathfinderMob implements GeoEntity, Saddleable 
                 this.eat(player.getMainHandItem());
             } else {
                 if (this.isTamed()) {
+                    this.navigation.stop();
                     this.setSitting(!this.isSitting());
                 }
             }
