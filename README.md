@@ -3,27 +3,29 @@
 
 ## Gacha Data:
 
-Gacha's has a base charge of 0 and a base purity of 100. For every item they eat, these values will change. Once they get a charge of 50 or more, they will drop a crystal. The rarity of this crystal will depend on the level of purity that the gacha has at the time of dropping the crystal. Below are the values table.
+Gacha's has a base charge of 0 and a base purity of 100. For every item they eat, these values will change. Once they get a charge of 64 or more, they will drop a crystal and the charge and purity values will be reset. The rarity of this crystal will depend on the level of purity that the gacha has at the time of dropping the crystal. Below are the values table.
 
 ### Charge and purity table for each item rarity:
 
 | Rarity   | Charge | Purity |
 |----------|--------|--------|
 | Common   |   +1   |   -3   |
-| Uncommon |   +3   |   -2   |
-| Rare     |   +5   |   -1   |
-| Epic     |   +7   |   -0   |
+| Uncommon |   +4   |   -2   |
+| Rare     |   +7   |   -1   |
+| Epic     |   +13   |   -0   |
 
-The gacha's crystals will drop an item when you right-click them. The dropped item is random except his rarity, that are linked to the crystal rarity. Here is the table of what crystal will be dropped depending on the level of purity of the gacha. Also, there is a random chance to get a better one beside the purity level.
+The gacha's crystals will drop an item when you right-click them. The dropped item is random except his rarity, that are linked to the crystal rarity. Here is the table of what crystal will be dropped depending on the level of purity of the gacha. Also, there is a random chance of 25% to get a better one beside the purity level.
 
 ### Crystal dropped table according to purity:
 
-| Purity | Rarity    | Random Chance |
-|--------|-----------|---------------|
-| >=91   |  Epic     |      2%       |
-| >=67   |  Rare     |     12%       |
-| >=30   |  Uncommon |     22%       |
-| <=29   |  Common   |      -        |
+| Purity | Rarity    |
+|--------|-----------|
+| >=91   |  Epic     |
+| >=69   |  Rare     |
+| >=30   |  Uncommon |
+| <=29   |  Common   |
+
+If the gacha drop a crystal with a purity of more than 67, will be tamed. Once you tame a gacha you can make it sit (by right-clicking him with the main hand empty while crouching) so he wouldn't move anymore til you stand up him. Also, you can ride the gacha, first you need to give him a saddle by right-clicking at him with a saddle in the main hand but **WITHOUT CROUCHING** otherwise he will eat it.
 
 ## Configurable Data:
 
@@ -43,4 +45,4 @@ To blacklist a entire mod you have to add, to the comma separated list, somethin
 
 ## Spawn Eggs
 
-There is an option to indicate if spawn eggs can be dropped or not by the crystals. True if you want, false if you don't. True by default.
+There is an option to indicate if spawn eggs can be dropped or not by the crystals. True if you want, false if you don't. False by default.
