@@ -5,7 +5,7 @@
 
 Gacha's has a base charge of 0 and a base purity of 100. For every item they eat, these values will change. Once they get a charge of 50 or more, they will drop a crystal. The rarity of this crystal will depend on the level of purity that the gacha has at the time of dropping the crystal. Below are the values table.
 
-### Charge and purity table for each rarity:
+### Charge and purity table for each item rarity:
 
 | Rarity   | Charge | Purity |
 |----------|--------|--------|
