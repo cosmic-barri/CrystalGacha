@@ -1,6 +1,8 @@
 # Crystal Gacha
 ## Github repository for Crystal Gacha Minecraft mod.
 
+Crystal Gacha adds a new entity that spawns on dark forest, the *Crystal Gacha*, based on the gacha from the videogame Ark: Survival Evolved. 
+
 ## Gacha Data:
 
 Gacha's has a base charge of 0 and a base purity of 100. For every item they eat, these values will change. Once they get a charge of 64 or more, they will drop a crystal and the charge and purity values will be reset. The rarity of this crystal will depend on the level of purity that the gacha has at the time of dropping the crystal. Below are the values table.
